@@ -15,9 +15,9 @@ class IndexView(ListView):
 
 class CreateProdutoView(CreateView):
     model = Produto
-    template_name = 'produto_form.html'
+    template_name = 'produto_criacao.html'
     fields = ['nome', 'preco']
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('add_produto')
 
 
 class UpdateProdutoView(UpdateView):
